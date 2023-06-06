@@ -24,9 +24,11 @@ function copyText() {
 
   navigator.clipboard.writeText( $('#output').text() );
   
-  $('#output-copy').text('Copy');
+  $('#output-copy').text('Copied');
   $('#clamp-number').val('');
-
- 
+  
+  setTimeout(function(){
+    $('#output-copy').text('Copy');
+  }, 2000);
 
 }
